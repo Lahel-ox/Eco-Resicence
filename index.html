@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Guia residencial de coleta seletiva, reciclagem e sustentabilidade.">
+  <title>EcoResidencial | Coleta Seletiva</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <nav class="navbar">
+      <a class="logo" href="#inicio">🌱 EcoResidencial</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false"
+        aria-controls="navLinks" aria-label="Abrir menu">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#coleta">Coleta</a>
+        <a href="#materiais">Reciclagem</a>
+        <a href="#dicas">Dicas</a>
+        <a href="#quiz">Quiz</a>
+      </div>
+    </nav>
+
+    <div class="hero-content" id="inicio">
+      <span class="tag">PROJETO DE EXTENSÃO</span>
+      <h1>Pequenas atitudes,<br>grandes transformações.</h1>
+      <p>
+        Um guia prático para tornar nosso residencial mais limpo,
+        consciente e sustentável.
+      </p>
+      <a class="btn btn-primary" href="#coleta">Consultar coleta ♻️</a>
+    </div>
+
+    <div class="hero-decoration" aria-hidden="true">🌎</div>
+  </header>
+
+  <main>
+    <section class="intro">
+      <div>
+        <span class="eyebrow">NOSSA RESPONSABILIDADE</span>
+        <h2>Sustentabilidade começa em casa</h2>
+        <p>
+          Separar corretamente os resíduos ajuda a reduzir a poluição,
+          economizar recursos naturais e incentivar a reciclagem.
+          Faça sua parte e inspire seus vizinhos!
+        </p>
+      </div>
+      <div class="ods">
+        <div class="ods-card">
+          <strong>11</strong>
+          <span>Cidades e comunidades sustentáveis</span>
+        </div>
+        <div class="ods-card ods-yellow">
+          <strong>12</strong>
+          <span>Consumo e produção responsáveis</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="coleta">
+      <div class="section-heading">
+        <span class="eyebrow">ORGANIZE-SE</span>
+        <h2>Calendário da coleta</h2>
+        <p>Confira os dias e horários previstos para o residencial.</p>
+      </div>
+
+      <div class="schedule-grid">
+        <article class="schedule-card organic">
+          <div class="card-icon">🍃</div>
+          <h3>Resíduos orgânicos</h3>
+          <p>Segunda, quarta e sexta-feira</p>
+          <strong>⏰ A partir das 07h</strong>
+          <small>Restos de frutas, verduras e alimentos.</small>
+        </article>
+
+        <article class="schedule-card recycle">
+          <div class="card-icon">♻️</div>
+          <h3>Materiais recicláveis</h3>
+          <p>Terça e quinta-feira</p>
+          <strong>⏰ A partir das 09h</strong>
+          <small>Papel, plástico, metal e vidro aceitos pela coleta local.</small>
+        </article>
+
+        <article class="schedule-card reject">
+          <div class="card-icon">🗑️</div>
+          <h3>Rejeitos</h3>
+          <p>Consulte a administração</p>
+          <strong>📍 Descarte orientado</strong>
+          <small>Fraldas, papel higiênico e resíduos não recicláveis.</small>
+        </article>
+      </div>
+
+      <p class="notice">
+        ℹ️ Os horários acima são os informados no projeto. Confirme com
+        a administração se há coleta de rejeitos em dias específicos.
+      </p>
+    </section>
+
+    <section class="section materials-section" id="materiais">
+      <div class="section-heading">
+        <span class="eyebrow">DESCARTE CORRETO</span>
+        <h2>Onde descartar cada material?</h2>
+        <p>Pesquise um resíduo para descobrir como prepará-lo para o descarte.</p>
+      </div>
+
+      <label class="search-label" for="materialSearch">
+        Pesquisar material
+      </label>
+      <input
+        type="search"
+        id="materialSearch"
+        class="search-input"
+        placeholder="Ex.: garrafa PET, papelão, pilha..."
+        autocomplete="off"
+      >
+
+      <div class="filter-buttons" aria-label="Filtrar materiais">
+        <button class="filter active" data-filter="todos">Todos</button>
+        <button class="filter" data-filter="reciclavel">Recicláveis</button>
+        <button class="filter" data-filter="organico">Orgânicos</button>
+        <button class="filter" data-filter="especial">Especiais</button>
+      </div>
+
+      <div class="materials-grid" id="materialsGrid">
+        <article class="material-card" data-type="reciclavel"
+          data-search="papel jornal revista papelão caixa">
+          <span class="material-icon">📄</span>
+          <h3>Papel e papelão</h3>
+          <p>Jornais, caixas e folhas limpas e secas.</p>
+          <span class="material-status">♻️ Reciclável</span>
+        </article>
+
+        <article class="material-card" data-type="reciclavel"
+          data-search="plastico garrafa pet embalagem pote">
+          <span class="material-icon">🧴</span>
+          <h3>Plásticos</h3>
+          <p>Garrafas e embalagens aceitas pela coleta local. Retire o excesso de resíduos.</p>
+          <span class="material-status">♻️ Reciclável</span>
+        </article>
+
+        <article class="material-card" data-type="reciclavel"
+          data-search="metal lata aluminio aço">
+          <span class="material-icon">🥫</span>
+          <h3>Metais</h3>
+          <p>Latas e embalagens metálicas vazias e sem excesso de resíduos.</p>
+          <span class="material-status">♻️ Reciclável</span>
+        </article>
+
+        <article class="material-card" data-type="reciclavel"
+          data-search="vidro garrafa pote frasco">
+          <span class="material-icon">🍾</span>
+          <h3>Vidros</h3>
+          <p>Garrafas e potes aceitos pelo serviço local. Embale vidros quebrados com segurança.</p>
+          <span class="material-status">♻️ Reciclável*</span>
+        </article>
+
+        <article class="material-card" data-type="organico"
+          data-search="restos comida casca fruta verdura borra café">
+          <span class="material-icon">🍌</span>
+          <h3>Resíduos orgânicos</h3>
+          <p>Cascas, restos de frutas, verduras e borra de café.</p>
+          <span class="material-status organic-status">🍃 Orgânico</span>
+        </article>
+
+        <article class="material-card" data-type="especial"
+          data-search="pilha bateria eletronico celular carregador">
+          <span class="material-icon">🔋</span>
+          <h3>Pilhas e eletrônicos</h3>
+          <p>Leve a pontos de coleta específicos ou de logística reversa.</p>
+          <span class="material-status special-status">⚠️ Especial</span>
+        </article>
+
+        <article class="material-card" data-type="especial"
+          data-search="oleo cozinha oleo usado garrafa">
+          <span class="material-icon">🫗</span>
+          <h3>Óleo de cozinha</h3>
+          <p>Armazene frio em recipiente fechado e procure um ponto de coleta.</p>
+          <span class="material-status special-status">⚠️ Especial</span>
+        </article>
+
+        <article class="material-card" data-type="especial"
+          data-search="medicamento remedio vencido">
+          <span class="material-icon">💊</span>
+          <h3>Medicamentos</h3>
+          <p>Entregue em farmácias ou pontos de coleta que os recebam.</p>
+          <span class="material-status special-status">⚠️ Especial</span>
+        </article>
+      </div>
+
+      <p id="noResults" class="empty-message" hidden>
+        Nenhum material encontrado. Tente outra palavra.
+      </p>
+
+      <p class="notice">
+        *A aceitação dos materiais varia conforme o município e o serviço
+        de coleta. Não descarte lâmpadas, pilhas, medicamentos ou resíduos
+        perigosos junto aos recicláveis comuns.
+      </p>
+    </section>
+
+    <section class="section tips-section" id="dicas">
+      <div class="section-heading">
+        <span class="eyebrow">ATITUDES SUSTENTÁVEIS</span>
+        <h2>5 hábitos que fazem a diferença</h2>
+      </div>
+
+      <div class="tips-list">
+        <article class="tip">
+          <span>01</span>
+          <div>
+            <h3>Separe os resíduos</h3>
+            <p>Tenha recipientes diferentes para orgânicos, recicláveis e rejeitos.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <span>02</span>
+          <div>
+            <h3>Limpe sem desperdiçar água</h3>
+            <p>Retire o excesso de resíduos das embalagens antes do descarte.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <span>03</span>
+          <div>
+            <h3>Reduza o consumo</h3>
+            <p>Prefira itens reutilizáveis e evite embalagens desnecessárias.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <span>04</span>
+          <div>
+            <h3>Respeite os horários</h3>
+            <p>Disponibilize os resíduos no horário indicado para evitar sujeira.</p>
+          </div>
+        </article>
+        <article class="tip">
+          <span>05</span>
+          <div>
+            <h3>Compartilhe conhecimento</h3>
+            <p>Converse com vizinhos e incentive a participação de todos.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section checklist-section">
+      <div class="section-heading">
+        <span class="eyebrow">PARTICIPE</span>
+        <h2>Meu compromisso sustentável</h2>
+        <p>Marque as ações que você já realizou hoje.</p>
+      </div>
+
+      <div class="checklist" id="checklist">
+        <label><input type="checkbox"> Separei os resíduos corretamente.</label>
+        <label><input type="checkbox"> Evitei desperdício de água.</label>
+        <label><input type="checkbox"> Reutilizei ou recusei uma embalagem.</label>
+        <label><input type="checkbox"> Consultei os dias de coleta.</label>
+        <label><input type="checkbox"> Incentivei alguém a reciclar.</label>
+      </div>
+
+      <div class="progress-info">
+        <span id="progressText" aria-live="polite">0 de 5 ações concluídas</span>
+        <span id="progressPercent">0%</span>
+      </div>
+      <div class="progress-track" role="progressbar"
+        aria-label="Progresso das ações sustentáveis"
+        aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"
+        id="progressTrack">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+      <button class="btn btn-secondary" id="resetChecklist">
+        Reiniciar checklist
+      </button>
+    </section>
+
+    <section class="section quiz-section" id="quiz">
+      <div class="section-heading">
+        <span class="eyebrow">APRENDA BRINCANDO</span>
+        <h2>Quiz da sustentabilidade</h2>
+        <p>Teste seus conhecimentos sobre coleta seletiva.</p>
+      </div>
+
+      <div class="quiz-box">
+        <div class="quiz-top">
+          <span id="quizCounter">Pergunta 1 de 4</span>
+          <span id="quizScore">Acertos: 0</span>
+        </div>
+
+        <h3 id="quizQuestion">Onde devemos descartar pilhas usadas?</h3>
+        <div id="quizOptions" class="quiz-options"></div>
+        <p id="quizFeedback" class="quiz-feedback" aria-live="polite"></p>
+        <button class="btn btn-primary" id="nextQuestion" hidden>
+          Próxima pergunta →
+        </button>
+        <button class="btn btn-secondary" id="restartQuiz" hidden>
+          Refazer quiz
+        </button>
+      </div>
+    </section>
+
+    <section class="call-to-action">
+      <span>🌍</span>
+      <h2>O futuro sustentável começa com você!</h2>
+      <p>
+        Cada resíduo separado corretamente é uma oportunidade de cuidar
+        do meio ambiente e melhorar a vida em comunidade.
+      </p>
+      <a class="btn btn-light" href="#inicio">Voltar ao início ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    <p><strong>EcoResidencial</strong> | Projeto de Extensão - Lahel Gonçalves Malta</p>
+    <p>Alinhado aos Objetivos de Desenvolvimento Sustentável propostos pela ONU.
+    </p>
+    <p class="footer-note">Informações educativas. Consulte as orientações da coleta local.</p>
+  </footer>
+</body>
+</html>
